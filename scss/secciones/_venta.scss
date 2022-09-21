@@ -1,0 +1,145 @@
+main {
+    .venta-arr-title {
+        height: 250px;
+        display: flex;
+        justify-content: space-between;
+        @extend %estiloImagenTitulos;
+
+        h1 {
+            @extend %estiloTitulos;
+        }
+    }
+
+    .venta-arr-main {
+        display: flex;
+        flex-direction: row;
+        .casas-container {
+            width: 70%;
+            .card {
+                @extend %estiloCard;
+                margin: 1rem;
+                .row {
+                    max-height: 208px;
+                    overflow: auto;
+                    &::-webkit-scrollbar {
+                        scrollbar-color: red;
+                    }
+                    .col-md-4 {
+                        .carousel-inner {
+                            .carousel-item {
+                                .w-100 {
+                                    border-top-left-radius: 0.375rem;
+                                }
+                            }
+                            position: relative;
+                            p {
+                                position: absolute;
+                                background-color: rgba(0, 0, 0, 0.363);
+                                color: $colorFondo;
+                                margin: 0;
+                                bottom: 0;
+                                right: 0;
+                                padding: 0.5rem;
+                                font-size: 1rem;
+                                z-index: 2;
+                            }
+                        }
+
+                    }
+                }
+                    }
+                }
+            }
+        }
+        .form-container-todos {
+            @extend %estiloFormulario;
+            width: 30%;
+            h3 {
+                color: white;
+                background-color: $colorFondoTitulos;
+                width: fit-content;
+                padding: 10px;
+            }
+            .button-search {
+                @extend %estiloBoton;
+            }
+            .form-select {
+                @extend %estiloSelect;
+            }
+        }
+
+@media (max-width: 900px){
+    main {
+        .venta-arr-main {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .casas-container {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                align-items: center;
+                .card {
+                    .row {
+                        .col-md-4 {
+                            .carousel-inner {
+                                .carousel-item {
+                                    .w-100 {
+                                        border-top-right-radius: 0.375rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }    
+            }
+            .form-container-todos {
+                width: 100%;
+                align-items: center;
+                border-top: 1px $colorBorde solid;
+                border-left: none;
+                select {
+                    width: 70%;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){ 
+    main {
+        .venta-arr-main {
+            .casas-container {
+                .card {
+                    width: 70%;
+                    .row {
+                        max-height: fit-content;
+                        overflow: visible;
+                        
+                        .col-md-6 {
+                            min-height: 50px;
+                            max-height: 100px;
+                            overflow: scroll;
+                        }    
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (max-width: 500px){
+    main {
+        .search-by {
+            display: none;
+        }
+        .venta-arr-main {
+            .casas-container {
+                .card {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}

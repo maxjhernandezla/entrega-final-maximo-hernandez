@@ -1,0 +1,129 @@
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "contacto redes-cont copyright";
+
+    grid-area: footer;
+    background-color: $colorLogo;
+
+
+    .contacto {
+        grid-area: contacto;
+        font-size: 70%;
+        display: flex;
+        flex-direction: column;
+        @include fontStyle ($colorFondo, start);
+            h4 {
+                @extend %estiloTitulosFooter;
+                
+            }
+            ul {
+                list-style: none;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: fit-content;
+                margin-bottom: 0;
+                a {
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0px 10px 0px;
+                    
+                    img {
+                        height: 20px;
+                        margin-right: 5px;                 
+                    }
+                    p {
+                        margin: 0;
+                        color: $colorFondo;
+                        &:hover {
+                            color: $colorHover;
+                        }
+                    }
+                }
+            }
+    }
+
+    .redes-cont {
+        grid-area: redes-cont;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 70%;
+        padding: 10px;
+        h4 {
+            @extend %estiloTitulosFooter;
+        }
+       
+
+        img {
+            width: 40px;
+            margin-top: 20px;
+            padding: 5px;
+
+            &:hover {
+                transform: translateY(2px);
+            }
+        }
+    }
+
+    .servicios-footer {
+       font-size: 70%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        h4 {
+            @extend %estiloTitulosFooter
+        }
+        
+        ul {
+            list-style: none;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: fit-content;
+                li {
+                    margin: 5px;
+                    width: fit-content;
+                    &:hover {
+                        transform: translateY(2px);
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $colorFondo;
+                    &:hover {
+                        color: $colorHover;
+                    }
+                    
+                }
+        }
+    }
+
+    .copyright {
+        grid-area: copyright;
+        color: #dfdfcecc;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 724px) {
+    .footer {
+        display: block;
+        .redes-cont {
+            align-items: flex-start;
+            img {
+                margin-left: 15px;
+            }
+        }
+    }
+    
+}

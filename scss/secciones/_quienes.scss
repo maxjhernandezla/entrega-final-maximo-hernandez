@@ -1,0 +1,109 @@
+.quienes-main {
+    background-color: $colorFondo;
+    .quienes-title {
+        height: 250px;
+        @extend %estiloImagenTitulos;
+        h1 {
+            @extend %estiloTitulos;
+            background-color: #766b6ba5;
+        }
+    }
+
+    .quienes-container {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        .quienes-somos-section {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 70vw;
+            img {
+                width: 450px;
+                align-self: center;
+                margin: 25px;
+                @extend %estiloCard;
+              }
+            p {
+                margin: 15px;
+            }
+            .firma {
+                font-size: medium;
+                text-align: end
+            }
+          }
+        .form-container-todos {
+            @extend %estiloFormulario;
+            h3 {
+                color: white;
+                background-color: $colorFondoTitulos;
+                width: fit-content;
+                padding: 10px;
+            }
+            .button-search {
+                @extend %estiloBoton;
+            }
+            .form-select {
+                @extend %estiloSelect;
+            }
+        }  
+    }
+}
+
+@media (max-width: 750px){
+    .quienes-main {
+        .quienes-container {
+            display: block;
+            .quienes-somos-section {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: auto;
+                border-bottom: $colorBorde;
+            }
+            .form-container-todos {
+                width: 100%;
+
+                border-left: none;
+                select {
+                    width: 98%;
+                  }
+              }
+        }
+    }
+}
+@media (max-width: 500px) {
+.quienes-main{    
+    .quienes-container {
+        .quienes-somos-section {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: auto;
+            img {
+                width: 310px;
+                align-self: center;
+                padding: 0px;
+            }
+        }
+        }
+    }   
+}
+
+@media (max-width: 350px) {
+    .quienes-main{    
+        .quienes-container {
+            .quienes-somos-section {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: auto;
+                img {
+                    width: 280px;
+                    align-self: center;
+                    padding: 0px;
+                }
+            }
+            }
+        }   
+    }

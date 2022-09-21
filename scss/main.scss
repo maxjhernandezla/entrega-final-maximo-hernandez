@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box
+}
+
+a {
+    text-decoration: none;
+}
+@import './variables/colores';
+@import './variables/extend';
+
+@import './secciones/header';
+@import '../scss/secciones/index';
+@import './secciones/footer.scss';
+@import './secciones/venta';
+@import './secciones/contacto';
+@import './secciones/quienes';

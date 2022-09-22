@@ -107,6 +107,8 @@ header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link
     font-weight: bolder; }
 
 @media screen and (max-width: 991px) {
+  header .navbar .container-fluid .navbar-brand .logo-img {
+    width: 125px; }
   header .navbar .navbar-collapse {
     z-index: 1;
     position: absolute;
@@ -189,7 +191,8 @@ main .propiedades-destacadas {
         margin: 0;
         bottom: 0;
         padding: 0.5rem;
-        font-size: 1rem; }
+        font-size: 1rem;
+        z-index: 2; }
         main .propiedades-destacadas .card .img-container .texto-imagen p {
           margin: 0; }
   main .propiedades-destacadas .card-icon {
@@ -247,7 +250,7 @@ main .propiedades-destacadas {
 
 @media (max-width: 500px) {
   main .propiedades-destacadas .card {
-    width: 80%; } }
+    width: 90%; } }
 
 .footer {
   display: grid;

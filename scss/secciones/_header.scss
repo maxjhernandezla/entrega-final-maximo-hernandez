@@ -57,6 +57,13 @@ header {
 @media screen and (max-width: 991px) {
     header {
         .navbar {
+            .container-fluid{
+                .navbar-brand {
+                    .logo-img {
+                        width: 125px;
+                    }
+                }
+            }
             .navbar-collapse {
                 z-index: 1;
                 position: absolute;
